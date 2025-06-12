@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartão BitLove</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="card">
+    <section class="card-content">
+      <div id="heart-container"></div>
+      <h1>✨ Parabéns, casal pixelado! ✨</h1>
+  
+      <!-- Aqui vai o carrossel com hover -->
+      <div class="pixel-frame auto-gallery">
+        <img id="original-photo" class="img-front" />
+        <img id="generated-photo" class="img-back" />
+      </div>
+  
+      <p class="description">
+        Vocês são um casal do tipo: <span id="game-theme"></span> 💘
+      </p>
+      <p class="duration">
+        Juntos há <span id="time-together"></span>
+      </p>
+  
+      <blockquote class="poem" id="poem-output">
+        <!-- Poema será inserido aqui -->
+      </blockquote>
+  
+      <button onclick="window.location.href='index.html'">Criar outro cartão</button>
+    </section>
+  </main>
+  <div id="heart-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

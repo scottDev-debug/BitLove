@@ -1,0 +1,203 @@
+/* ==== GERAL ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header img {
+  width: 100px;
+  image-rendering: pixelated;
+}
+
+header p {
+  margin-top: 1rem;
+  color: #ff66c4;
+  font-size: 0.8rem;
+}
+
+/* ==== FORMULÁRIO ==== */
+#form-container {
+  background-color: #1a1a1a;
+  border: 4px solid #ff66c4;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+fieldset {
+  border: 2px dashed #ffcc00;
+  padding: 1.5rem;
+}
+
+legend {
+  padding: 0 1rem;
+  color: #ffcc00;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.6rem 0;
+  background-color: #333;
+  color: white;
+  border: 2px solid #666;
+  font-family: inherit;
+}
+
+button {
+  background-color: #00ffcc;
+  color: black;
+  font-weight: bold;
+  border: 3px solid black;
+  padding: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #00ccaa;
+}
+
+/* ==== CARTÃO FINAL ==== */
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.card-content {
+  text-align: center;
+  background-color: #1a1a1a;
+  border: 4px solid #ff66c4;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff66c4;
+  max-width: 600px;
+}
+
+/* ==== ANIMAÇÃO IMAGEM === */
+.pixel-frame.auto-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 370px; /* 👈 define altura do container */
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.auto-gallery {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.auto-gallery img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  border: 4px solid #ffcc00;
+  animation: mario-fade 6s infinite;
+  clip-path: circle(100% at 50% 50%);
+}
+
+.auto-gallery img.img-front {
+  animation-delay: 2s;
+  z-index: 2;
+}
+
+.auto-gallery img.img-back {
+  animation-delay: 5s;
+  z-index: 1;
+}
+
+@keyframes mario-fade {
+  0%, 40% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 1;
+  }
+  50%, 90% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 3;
+  }
+}
+
+
+/* ==== POEMA ==== */
+.poem {
+  background-color: #262626;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #ff66c4;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+
+.card-content {
+  position: relative; /* necessário para posicionar a chuva dentro */
+  overflow: hidden;
+}
+
+/* coração que vai cair */
+.heart-drop {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0.9;
+  animation: fall 4s linear forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(350px); /* altura média do mural */
+    opacity: 0;
+  }
+}

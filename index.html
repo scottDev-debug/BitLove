@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitLove</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <img src="pngbitlove.png" alt="coração em pixel" />
+        <p> Seu amor em cada pixel</p> 
+    </header>
+    <main>
+        <section id="form-container">
+            <form id="love-form" enctype="multipart/form-data">
+<fieldset>
+<legend> o cartao do casal</legend>
+                <!-- Nome 1 -->
+    <label for="name1">Nome 1:</label>
+    <input type="text" id="name1" name="name1" required />
+
+                <!-- Nome 2 -->
+    <label for="name2">Nome 2:</label>
+    <input type="text" id="name2" name="name2" required />
+
+                <!-- Jogo favorito -->
+    <label for="game">Jogo favorito do casal:</label>
+    <input type="text" id="game" name="game" required />
+
+            <!-- Tempo juntos -->
+    <label for="duration">Tempo juntos (em anos ou meses):</label>
+    <input type="text" id="duration" name="duration" required />
+
+                 <!-- Upload de imagem -->
+    <label for="photo">Foto do casal:</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required />
+
+                <!-- Botão de envio -->
+    <button type="submit">Criar Cartão do Amor</button>
+
+    </fieldset>
+ </form>
+
+ </section>
+    </main>
+    <footer>
+        <p>© 2025 BitLove. Criado com ❤️ e pixels</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
